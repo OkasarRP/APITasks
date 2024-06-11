@@ -8,12 +8,12 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-class User extends Authenticatable
+class Task extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
    public function users(){
-    return $this->belongsToMany(User::class);
+    return $this->belongsTo(User::class);
    }
 
 }
